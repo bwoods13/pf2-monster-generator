@@ -1,0 +1,23 @@
+<h2>
+  Welcome {{ name }}
+</h2>
+
+<h2>
+  Set Monster Level:
+
+  <select id="selectLevel" (change)="changeLevel($event)">
+    <option *ngFor="let level of levels" [ngValue]="level">
+      {{level}}
+    </option>
+  </select>
+</h2>
+
+
+<select id="selectAbilityMods"> <!--</select> onchange="location.reload()"> -->
+  <option *ngFor="let abilityMod of abilityMods[selectedLevelOffset]" value={{abilityMod}}>
+    {{abilityMod}}
+  </option>
+</select>
+
+
+<button type="button" onclick="location.reload()">Calculate Stats</button>
