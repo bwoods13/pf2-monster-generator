@@ -1,23 +1,196 @@
-<h2>
-  Welcome {{ name }}
-</h2>
+<div id="main">
+  <h1 class="Title">
+    <a>Creature Building Tool</a>
+  </h1>
+  Most of the statistics in this section use a scale of extreme, high, moderate, and low—some use terrible values as well.
+  <br><Br>
+  <b>Extreme:</b> The creature is world class in this statistic and can challenge almost any character. Most creatures have no extreme statistics or only one extreme statistic,
+  although some creatures might have additional extreme statistics and weaker related statistics elsewhere (a common example being a creature trading accuracy for
+  extreme damage). Examples from the Bestiary include the succubus’s Diplomacy and the lich’s spell DC.
+  <br><br>
+  <b>High:</b> Extremely capable but not world class, the creature presents a challenge for most characters. Just about all creatures have at least one high value. Most
+  combat-focused creatures have high AC and either a high attack bonus and high damage, or a merely moderate attack bonus but extreme damage. An ogre warrior’s
+  attack bonus and a kobold scout’s Stealth are high values.
+  <br><br>
+  <b>Moderate:</b> A middle-of-the road statistic can cover anything unremarkable about the creature. Use this one often.
+  <br><br>
+  <b>Low:</b> The creature is actively bad at this. Choose these intentionally to represent the creature’s weak points. Most creatures should have at least one low statistic; an
+  example is the goblin pyro’s Will save.
+  <br><br>
+  <b>Terrible:</b> Some statistics can dip even lower than low, to terrible. This indicates a truly awful statistic that still isn’t game-breakingly bad. A spider’s Intelligence is
+  terrible, as is a dero stalker’s Will save.
+  <br><br>
+  When it comes to statistics, a creature should be balanced overall. That means if you’re giving a creature an extreme
+  statistic, it should have some low or terrible statistics to compensate. For example, if you were making a creature
+  extremely hard to hit by giving it an extreme AC, you’d likely give it lower saving throws or low HP. If a creature
+  is great at spellcasting, it might need several low statistics to be a balanced challenge. There’s no perfect system for
+  making these decisions. If you’ve made a creature that has four high stats and nothing low, or vice-versa, take another
+  look. A creature’s strengths and weaknesses change the PCs’ strategies for dealing with it, and that’s what makes
+  playing the game fun!
+  <br><br>
+  At the higher levels of the game, PCs have more tools at their disposal, so the creatures they face need to hit back
+  harder! At higher levels, give each creature more extreme statistics. Having one extreme statistic becomes typical
+  around 11th level. A creature of 15th level or higher typically has two extreme statistics, and one of 20th level
+  or higher should have three or four. Keep in mind that these should be relevant to the encounters you expect them to
+  have—extreme social skills aren’t much use to a combatfocused creature. Be careful about giving multiple extreme
+  statistics that are closely linked: a creature with extreme damage and Fortitude saves is one thing, but having an
+  extreme attack bonus and extreme damage allows the creature to apply both extreme statistics to each attack.
+  <br><br>
+  <h3>Base Road Maps</h3>
+  You can use the following suggestions to set the baseline when creating your road map. For example, use brute for a big, tough
+  creature like an ogre, and skirmisher for a darting enemy. Each entry is a starting point you can customize as you see fit. Any
+  core statistic that isn’t listed should typically use moderate numbers. You can set ability modifiers and add additional
+  abilities as needed. To make a creature that resembles a character of a certain class, see Class Road maps on page 73.
+  <br><br>
+  <b>Brute:</b> low Perception; high or extreme Str modifier, high to moderate Con modifier, low or lower Dex and mental
+  modifiers; moderate or low AC; high Fortitude, low Reflex or Will or both; high HP; high attack bonus and high damage
+  or moderate attack bonus and extreme damage.
+  <br>
+  <b>Magical Striker:</b> high attack and high damage; moderate to high spell DCs; either a scattering of innate spells or
+  prepared or spontaneous spells up to half the creature’s level (rounded up) minus 1.
+  <br>
+  <b>Skill Paragon:</b> high or extreme ability modifier matching its best skills; typically high Reflex or Will and low
+  Fortitude; many skills at moderate or high and potentially one or two extreme skills; at least one special ability to use
+  the creature’s skills in combat.
+  <br>
+  <b>Skirmisher:</b> high Dex modifier; low Fortitude, high Reflex; higher Speed than typical.
+  <br>
+  <b>Sniper:</b> high Perception; high Dex modifier; low Fortitude, high Reflex; moderate to low HP; ranged Strikes have high
+  attack bonus and damage or moderate attack bonus and extreme damage (melee Strikes are weaker).
+  <br>
+  <b>Soldier:</b> high Str modifier; high to extreme AC; high Fortitude; high attack bonus and high damage; Attack of
+  Opportunity or other tactical abilities.
+  <br>
+  <b>Spellcaster:</b> high or extreme modifier for the corresponding mental ability; low Fortitude, high Will; low HP; low attack
+  bonus and moderate or low damage; high or extreme spell DCs; prepared or spontaneous.
 
-<h2>
-  Set Monster Level:
+</div>
 
-  <select id="selectLevel" (change)="changeLevel($event)">
-    <option *ngFor="let level of levels" [ngValue]="level">
-      {{level}}
-    </option>
-  </select>
-</h2>
+<div id="level Block">
+  <h2>
+    Set Monster Level:
 
+    <select id="selectLevel" (change)="filterLevel($event)">
+      <option *ngFor="let level of levels" [ngValue]="level">
+        {{level}}
+      </option>
+    </select>
+  </h2>
+</div>
 
-<select id="selectAbilityMods"> <!--</select> onchange="location.reload()"> -->
-  <option *ngFor="let abilityMod of abilityMods[selectedLevelOffset]" value={{abilityMod}}>
-    {{abilityMod}}
-  </option>
-</select>
+<div id="Main Stat Block">
+  <h3>
+    Main Combat Stats:
+  </h3>
+  <h4>
+    Select AC (Extreme, High, Moderate, Low):
+    <select id="selectAC"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let ac of dispAC" value={{ac}}>
+        {{ac}}
+      </option>
+    </select>
+    <br>
+    Select HP (High, Moderate, Low):
+    <select id="selectHP"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let hp of dispHP" value={{hp}}>
+        {{hp}}
+      </option>
+    </select>
+  </h4>
+  <h3>
+    Select Saving Throws (Extreme, High, Moderate, Low, Terrible):
+  </h3>
+  <h4>
+    <!-- Need List for Fortitude, Reflex, and Will-->
+    Fortitude:
+    <select id="selectFort"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let fort of dispSavingThrows" value={{fort}}>
+        {{fort}}
+      </option>
+    </select>
+    <br>
+    Reflex:
+    <select id="selectReflex"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let reflex of dispSavingThrows" value={{reflex}}>
+        {{reflex}}
+      </option>
+    </select>
+    <br>
+    Will:
+    <select id="selectWill"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let will of dispSavingThrows" value={{will}}>
+        {{will}}
+      </option>
+    </select>
+  </h4>
+  <h3>
+    Other Combat Bonuses
+  </h3>
+  <h4>
+    Resistances and Weaknesses (Max-Min): {{dispResistWeak}}
+    <br>
+    Strike Attack Bonus (Extreme, High, Moderate, Low): 
+    <select id="selectSTAB"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let stab of dispSTAB" value={{stab}}>
+        {{stab}}
+      </option>
+    </select>
+    <br>
+    Strike Damage (Extreme, High, Moderate, Low): 
+    <select id="selectStrikeDamage"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let strikeDamage of dispStrikeDamage" value={{strikeDamage}}>
+        {{strikeDamage}}
+      </option>
+    </select>
+    <br>
+    Spell Attack Bonus (Extreme, High, Moderate):
+    <select id="selectSpellDC"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let spellDC of dispSpellDC" value={{spellDC}}>
+        {{spellDC}}
+      </option>
+    </select>
+    <br>
+    Spell DC (Extreme, High, Moderate):
+    <select id="selectSpellAttackBonus"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let spellAttackBonus of dispSpellAttackBonus" value={{spellAttackBonus}}>
+        {{spellAttackBonus}}
+      </option>
+    </select>
+  </h4>
+</div>
 
+<div id="specialty stats">
+  <h3>
+    Side Stats:
+  </h3>
+  <h4>
+    Select Ability Modifiers (Extreme, High, Moderate, Low):
+    <select id="selectAbilityMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let abilityMod of dispAbilityMods" value={{abilityMod}}>
+        {{abilityMod}}
+      </option>
+    </select>
+    <br>
+    Select Perception Modifiers (Extreme, High, Moderate, Low, Terrible):
+    <select id="selectPerceptionMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let perceptionMod of dispPreceptionMods" value={{perceptionMod}}>
+        {{perceptionMod}}
+      </option>
+    </select>
+    <br>
+    Select Skill Modifiers (Extreme, High, Moderate, Low):
+    <select id="selectSkillMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let skillMod of dispSkillMods" value={{skillMod}}>
+        {{skillMod}}
+      </option>
+    </select>
+    <br>
+    A creature can have a single permanent item of the listed level without issue: {{dispSafeItems}}
+  </h4>
+  Note: Specific creatures or NPCs have more leeway to break these guidelines because you can plan the rest of your
+  adventure’s loot around them. Also, giving a boss villain a powerful magic item makes the fight and its aftermath
+  more interesting.
+  
+</div>
 
-<button type="button" onclick="location.reload()">Calculate Stats</button>
+<button type="button" onclick="location.reload()">Reset All</button>
