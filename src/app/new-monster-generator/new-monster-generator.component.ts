@@ -114,8 +114,8 @@ export class NewMonsterGeneratorComponent implements OnInit {
                       [ '17' ], // Level 21
                       [ '18' ], // Level 22
                       [ '19' ], // Level 23
-                      [ '20' ]]; //Level 24
-  ac : any =  [ [ '18', '15', '14', '12'], // Level -1
+                      [ '20' ]]; // Level 24
+  ac: any =  [ [ '18', '15', '14', '12'], // Level -1
                 [ '19', '16', '15', '13'], // Level 0
                 [ '19', '16', '15', '13'], // Level 1
                 [ '21', '18', '17', '15'], // Level 2
@@ -141,7 +141,7 @@ export class NewMonsterGeneratorComponent implements OnInit {
                 [ '51', '48', '47', '45'], // Level 22
                 [ '52', '49', '48', '46'], // Level 23
                 [ '54', '51', '50', '48']]; // Level 24
-  hp : any =  [ [       '9',     '8-7',     '6-5' ], // Level -1
+  hp: any =  [ [       '9',     '8-7',     '6-5' ], // Level -1
                 [   '20-17',   '16-14',   '13-11' ], // Level 0
                 [   '26-24',   '21-19',   '16-14' ], // Level 1
                 [   '40-36',   '32-28',   '25-21' ], // Level 2
@@ -167,7 +167,7 @@ export class NewMonsterGeneratorComponent implements OnInit {
                 [ '544–532', '436–424', '329–317' ], // Level 22
                 [ '581–569', '466–454', '351–339' ], // Level 23
                 [ '633–617', '508–492', '383–367' ]]; // Level 24
-  savingThrows : any =  [ [  '+9',  '+8',  '+5',  '+2',  '+0' ], // Level -1
+  savingThrows: any =  [ [  '+9',  '+8',  '+5',  '+2',  '+0' ], // Level -1
                           [ '+10',  '+9',  '+6',  '+3',  '+1' ], // Level 0
                           [ '+11', '+10',  '+7',  '+4',  '+2' ], // Level 1
                           [ '+12', '+11',  '+8',  '+5',  '+3' ], // Level 2
@@ -193,7 +193,7 @@ export class NewMonsterGeneratorComponent implements OnInit {
                           [ '+43', '+39', '+36', '+33', '+30' ], // Level 22
                           [ '+44', '+40', '+37', '+34', '+31' ], // Level 23
                           [ '+46', '+42', '+38', '+36', '+32' ]]; // Level 24
-  resistWeak : any =  [ [   '1-1' ], // Level -1
+  resistWeak: any =  [ [   '1-1' ], // Level -1
                         [   '3-1' ], // Level 0
                         [   '3-2' ], // Level 1
                         [   '5-2' ], // Level 2
@@ -219,7 +219,7 @@ export class NewMonsterGeneratorComponent implements OnInit {
                         [ '24-12' ], // Level 22
                         [ '25-13' ], // Level 23
                         [ '26-13' ]]; // Level 24
-  stab : any =  [ [ '+10',  '+8',  '+6',  '+4' ], // Level -1
+  stab: any =  [ [ '+10',  '+8',  '+6',  '+4' ], // Level -1
                   [ '+10',  '+8',  '+6',  '+4' ], // Level 0
                   [ '+11',  '+9',  '+7',  '+5' ], // Level 1
                   [ '+13', '+11',  '+9',  '+7' ], // Level 2
@@ -245,7 +245,7 @@ export class NewMonsterGeneratorComponent implements OnInit {
                   [ '+43', '+41', '+39', '+33' ], // Level 22
                   [ '+44', '+42', '+40', '+35' ], // Level 23
                   [ '+46', '+44', '+42', '+36' ]]; // Level 24
-  strikeDamage : any = [  [    '1d6+1 (4)',    '1d4+1 (3)',      '1d4 (3)',     '1d4 (2)' ], // Level -1
+  strikeDamage: any = [  [    '1d6+1 (4)',    '1d4+1 (3)',      '1d4 (3)',     '1d4 (2)' ], // Level -1
                           [    '1d6+3 (6)',    '1d6+2 (5)',    '1d4+2 (4)',   '1d4+1 (3)' ], // Level 0
                           [    '1d8+4 (8)',    '1d6+3 (6)',    '1d6+2 (5)',   '1d4+2 (4)' ], // Level 1
                           [  '1d12+4 (11)',   '1d10+4 (9)',    '1d8+4 (8)',   '1d6+3 (6)' ], // Level 2
@@ -271,7 +271,7 @@ export class NewMonsterGeneratorComponent implements OnInit {
                           [ '4d12+37 (63)', '4d10+26 (48)',  '4d8+22 (40)', '4d6+18 (32)' ], // Level 22
                           [ '4d12+39 (65)', '4d12+24 (50)', '4d10+20 (42)', '4d6+19 (33)' ], // Level 23
                           [ '4d12+42 (68)', '4d12+26 (52)', '4d10+22 (44)', '4d6+21 (35)' ]]; // Level 24
-  spellDC : any = [ [ '19', '16', '13' ], // Level -1
+  spellDC: any = [ [ '19', '16', '13' ], // Level -1
                     [ '19', '16', '13' ], // Level 0
                     [ '20', '17', '14' ], // Level 1
                     [ '22', '18', '15' ], // Level 2
@@ -297,7 +297,7 @@ export class NewMonsterGeneratorComponent implements OnInit {
                     [ '50', '45', '42' ], // Level 22
                     [ '51', '46', '43' ], // Level 23
                     [ '52', '48', '45' ]]; // Level 24
-  spellAttackBonus : any = [  [ '+11',  '+8',  '+5' ], // Level -1
+  spellAttackBonus: any = [  [ '+11',  '+8',  '+5' ], // Level -1
                               [ '+11',  '+8',  '+5' ], // Level 0
                               [ '+12',  '+9',  '+6' ], // Level 1
                               [ '+14', '+10',  '+7' ], // Level 2
