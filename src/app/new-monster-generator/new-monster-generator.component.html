@@ -98,6 +98,52 @@
     </select>
   </h4>
   <h3>
+    Main Stats:
+  </h3>
+  <h4>
+    Select Strength Modifier (Extreme, High, Moderate, Low):
+    <select id="selectSTRMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let strMod of dispAbilityMods" value={{strMod}}>
+        {{strMod}}
+      </option>
+    </select>
+    <br>
+    Select Dexterity Modifier (Extreme, High, Moderate, Low):
+    <select id="selectDEXMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let dexMod of dispAbilityMods" value={{dexMod}}>
+        {{dexMod}}
+      </option>
+    </select>
+    <br>
+    Select Constitution Modifier (Extreme, High, Moderate, Low):
+    <select id="selectCONMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let conMod of dispAbilityMods" value={{conMod}}>
+        {{conMod}}
+      </option>
+    </select>
+    <br>
+    Select Intelligence Modifier (Extreme, High, Moderate, Low):
+    <select id="selectINTMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let intMod of dispAbilityMods" value={{intMod}}>
+        {{intMod}}
+      </option>
+    </select>
+    <br>
+    Select Wisdom Modifier (Extreme, High, Moderate, Low):
+    <select id="selectWISMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let wisMod of dispAbilityMods" value={{wisMod}}>
+        {{wisMod}}
+      </option>
+    </select>
+    <br>
+    Select Charisma Modifier (Extreme, High, Moderate, Low):
+    <select id="selectCHAMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let chaMod of dispAbilityMods" value={{chaMod}}>
+        {{chaMod}}
+      </option>
+    </select>
+  </h4>
+  <h3>
     Select Saving Throws (Extreme, High, Moderate, Low, Terrible):
   </h3>
   <h4>
@@ -129,14 +175,14 @@
   <h4>
     Resistances and Weaknesses (Max-Min): {{dispResistWeak}}
     <br>
-    Strike Attack Bonus (Extreme, High, Moderate, Low): 
+    Strike Attack Bonus (Extreme, High, Moderate, Low):
     <select id="selectSTAB"> <!--</select> onchange="location.reload()"> -->
       <option *ngFor="let stab of dispSTAB" value={{stab}}>
         {{stab}}
       </option>
     </select>
     <br>
-    Strike Damage (Extreme, High, Moderate, Low): 
+    Strike Damage (Extreme, High, Moderate, Low):
     <select id="selectStrikeDamage"> <!--</select> onchange="location.reload()"> -->
       <option *ngFor="let strikeDamage of dispStrikeDamage" value={{strikeDamage}}>
         {{strikeDamage}}
@@ -178,10 +224,127 @@
       </option>
     </select>
     <br>
-    Select Skill Modifiers (Extreme, High, Moderate, Low):
-    <select id="selectSkillMods"> <!--</select> onchange="location.reload()"> -->
-      <option *ngFor="let skillMod of dispSkillMods" value={{skillMod}}>
-        {{skillMod}}
+  </h4>
+  <h3>
+    Skill Modifiers:
+  </h3>
+  <h4>
+    Select Acrobatics Modifier (Extreme, High, Moderate, Low):
+    <select id="selectAcrobaticsMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let acrobaticsMod of dispSkillMods" value={{acrobaticsMod}}>
+        {{acrobaticsMod}}
+      </option>
+    </select>
+    <br>
+    Select Arcana Modifier (Extreme, High, Moderate, Low):
+    <select id="selectArcanaMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let arcanaMod of dispSkillMods" value={{arcanaMod}}>
+        {{arcanaMod}}
+      </option>
+    </select>
+    <br>
+    Select Athletics Modifier (Extreme, High, Moderate, Low):
+    <select id="selectAthleticsMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let athleticsMod of dispSkillMods" value={{athleticsMod}}>
+        {{athleticsMod}}
+      </option>
+    </select>
+    <br>
+    Select Crafting Modifier (Extreme, High, Moderate, Low):
+    <select id="selectCraftingMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let craftingMod of dispSkillMods" value={{craftingMod}}>
+        {{craftingMod}}
+      </option>
+    </select>
+    <br>
+    Select Deception Modifier (Extreme, High, Moderate, Low):
+    <select id="selectDeceptionMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let deceptionMod of dispSkillMods" value={{deceptionMod}}>
+        {{deceptionMod}}
+      </option>
+    </select>
+    <br>
+    Select Diplomacy Modifier (Extreme, High, Moderate, Low):
+    <select id="selectDiplomacyMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let diplomacyMod of dispSkillMods" value={{diplomacyMod}}>
+        {{diplomacyMod}}
+      </option>
+    </select>
+    <br>
+    Select Intimidation Modifier (Extreme, High, Moderate, Low):
+    <select id="selectIntimidationMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let intimidationMod of dispSkillMods" value={{intimidationMod}}>
+        {{intimidationMod}}
+      </option>
+    </select>
+    <br>
+    Select Lore Modifier (Extreme, High, Moderate, Low):
+    <select id="selectLoreMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let loreMod of dispSkillMods" value={{loreMod}}>
+        {{loreMod}}
+      </option>
+    </select>
+    <br>
+    Select Medicine Modifier (Extreme, High, Moderate, Low):
+    <select id="selectMedicineMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let medicineMod of dispSkillMods" value={{medicineMod}}>
+        {{medicineMod}}
+      </option>
+    </select>
+    <br>
+    Select Nature Modifier (Extreme, High, Moderate, Low):
+    <select id="selectNatureMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let natureMod of dispSkillMods" value={{natureMod}}>
+        {{natureMod}}
+      </option>
+    </select>
+    <br>
+    Select Occultism Modifier (Extreme, High, Moderate, Low):
+    <select id="selectOccultismMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let occultismMod of dispSkillMods" value={{occultismMod}}>
+        {{occultismMod}}
+      </option>
+    </select>
+    <br>
+    Select Performance Modifier (Extreme, High, Moderate, Low):
+    <select id="selectPerformanceMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let performanceMod of dispSkillMods" value={{performanceMod}}>
+        {{performanceMod}}
+      </option>
+    </select>
+    <br>
+    Select Religion Modifier (Extreme, High, Moderate, Low):
+    <select id="selectReligionMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let religionMod of dispSkillMods" value={{religionMod}}>
+        {{religionMod}}
+      </option>
+    </select>
+    <br>
+    Select Society Modifier (Extreme, High, Moderate, Low):
+    <select id="selectSocietyMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let societyMod of dispSkillMods" value={{societyMod}}>
+        {{societyMod}}
+      </option>
+    </select>
+    <br>
+    Select Stealth Modifier (Extreme, High, Moderate, Low):
+    <select id="selectStealthMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let stealthMod of dispSkillMods" value={{stealthMod}}>
+        {{stealthMod}}
+      </option>
+    </select>
+    <br>
+    Select Survival Modifier (Extreme, High, Moderate, Low):
+    <select id="selectSurvivalMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let survivalMod of dispSkillMods" value={{survivalMod}}>
+        {{survivalMod}}
+      </option>
+    </select>
+    <br>
+    Select Thievery Modifier (Extreme, High, Moderate, Low):
+    <select id="selectThieveryMods"> <!--</select> onchange="location.reload()"> -->
+      <option *ngFor="let thieveryMod of dispSkillMods" value={{thieveryMod}}>
+        {{thieveryMod}}
       </option>
     </select>
     <br>
@@ -190,7 +353,7 @@
   Note: Specific creatures or NPCs have more leeway to break these guidelines because you can plan the rest of your
   adventure’s loot around them. Also, giving a boss villain a powerful magic item makes the fight and its aftermath
   more interesting.
-  
+
 </div>
 
 <button type="button" onclick="location.reload()">Reset All</button>
